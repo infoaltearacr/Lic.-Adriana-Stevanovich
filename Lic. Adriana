@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#123b36" />
+  <meta name="description" content="Lic. Adriana Stevanovich Rojas, abogada y notaria pública en Costa Rica. Servicios notariales, matrimonios, divorcios y asistencia legal en bienes raíces." />
+  <meta property="og:title" content="Lic. Adriana Stevanovich | Abogada y notaria pública" />
+  <meta property="og:description" content="Servicios notariales y asistencia legal en Costa Rica." />
+  <meta property="og:type" content="website" />
+  <title>Lic. Adriana Stevanovich | Abogada y notaria pública en Costa Rica</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --pine: #123b36;
+      --pine-dark: #0b2b28;
+      --paper: #f2f3eb;
+      --white: #fbfcf8;
+      --sage: #dce6dc;
+      --sage-dark: #a9bdb0;
+      --ink: #1c302c;
+      --muted: #61716b;
+      --line: rgba(28, 48, 44, 0.16);
+      --signal: #d9e67a;
+      --mono: 'Space Mono', ui-monospace, monospace;
+      --body: 'DM Sans', Arial, sans-serif;
+      --display: 'Cormorant Garamond', Georgia, serif;
+      --content: 1160px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      -webkit-font-smoothing: antialiased;
+    }
+    img, svg { max-width: 100%; }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid var(--signal); outline-offset: 4px; }
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 50;
+      transform: translateY(-160%);
+      padding: 12px 16px;
+      background: var(--signal);
+      color: var(--pine-dark);
+      font-weight: 700;
+    }
+    .skip-link:focus { transform: translateY(0); }
+    .wrap { width: min(var(--content), calc(100% - 48px)); margin-inline: auto; }
+    .eyebrow {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 0.69rem;
+      line-height: 1.5;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    .display { font-family: var(--display); font-weight: 500; }
+
+    .site-header {
+      position: relative;
+      z-index: 5;
+      background: var(--paper);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+    }
+    .brand { display: inline-flex; align-items: center; text-decoration: none; }
+    .brand-name {
+      display: block;
+      font-family: var(--display);
+      font-size: 1.55rem;
+      line-height: 0.95;
+      letter-spacing: 0.01em;
+    }
+    .brand-role {
+      display: block;
+      margin-top: 6px;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.56rem;
+      letter-spacing: 0.13em;
+      text-transform: uppercase;
+    }
+    .nav { display: flex; align-items: center; gap: 28px; }
+    .nav a {
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav a:hover { color: var(--pine); }
+    .header-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 12px 17px;
+      border: 1px solid var(--pine);
+      color: var(--pine);
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background-color 180ms ease, color 180ms ease;
+    }
+    .header-cta:hover { background: var(--pine); color: var(--white); }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--pine);
+      color: var(--white);
+    }
+    .hero::before {
+      position: absolute;
+      top: -260px;
+      right: -140px;
+      width: 650px;
+      height: 650px;
+      border: 1px solid rgba(242, 243, 235, 0.12);
+      border-radius: 50%;
+      content: '';
+      pointer-events: none;
+    }
+    .hero::after {
+      position: absolute;
+      top: -180px;
+      right: -60px;
+      width: 490px;
+      height: 490px;
+      border: 1px solid rgba(242, 243, 235, 0.10);
+      border-radius: 50%;
+      content: '';
+      pointer-events: none;
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      min-height: 620px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.13fr) minmax(310px, 0.87fr);
+      align-items: center;
+      gap: clamp(40px, 8vw, 100px);
+      padding-block: 92px;
+    }
+    .hero-copy { max-width: 690px; }
+    .hero .eyebrow { color: var(--signal); }
+    h1 {
+      max-width: 720px;
+      margin: 25px 0 22px;
+      font-family: var(--display);
+      font-size: clamp(3.6rem, 7.3vw, 6.8rem);
+      font-weight: 400;
+      letter-spacing: -0.045em;
+      line-height: 0.89;
+    }
+    h1 em { color: var(--signal); font-weight: 400; }
+    .hero-intro {
+      max-width: 570px;
+      margin: 0;
+      color: rgba(251, 252, 248, 0.78);
+      font-size: clamp(1rem, 1.5vw, 1.14rem);
+      line-height: 1.75;
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 13px; margin-top: 34px; }
+    .button {
+      display: inline-flex;
+      min-height: 52px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 13px 20px;
+      border: 1px solid transparent;
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-decoration: none;
+      transition: transform 180ms ease, background-color 180ms ease, color 180ms ease;
+    }
+    .button:hover { transform: translateY(-2px); }
+    .button-primary { background: var(--signal); color: var(--pine-dark); }
+    .button-primary:hover { background: #e5ef9d; }
+    .button-quiet { border-color: rgba(251, 252, 248, 0.34); color: var(--white); }
+    .button-quiet:hover { background: rgba(251, 252, 248, 0.08); }
+    .button svg, .header-cta svg { width: 17px; height: 17px; flex: 0 0 auto; }
+
+    .folio {
+      position: relative;
+      justify-self: end;
+      width: min(100%, 390px);
+      min-height: 400px;
+      padding: 28px 28px 28px 38px;
+      background: var(--paper);
+      color: var(--ink);
+      box-shadow: 18px 18px 0 rgba(6, 29, 26, 0.3);
+    }
+    .folio::before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 9px;
+      background: var(--signal);
+      content: '';
+    }
+    .folio-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 25px;
+      border-bottom: 1px solid var(--line);
+    }
+    .folio-top .eyebrow { color: var(--muted); font-size: 0.62rem; }
+    .folio-country {
+      color: var(--pine);
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .folio-title {
+      margin: 28px 0 8px;
+      font-family: var(--display);
+      font-size: clamp(2rem, 3vw, 2.65rem);
+      font-weight: 500;
+      letter-spacing: -0.025em;
+      line-height: 1;
+    }
+    .folio-text { margin: 0; color: var(--muted); font-size: 0.86rem; line-height: 1.65; }
+    .folio-list { margin: 29px 0 0; padding: 0; list-style: none; }
+    .folio-list li {
+      display: grid;
+      grid-template-columns: 32px 1fr;
+      align-items: baseline;
+      gap: 12px;
+      padding: 13px 0;
+      border-top: 1px solid var(--line);
+      font-size: 0.87rem;
+      font-weight: 600;
+    }
+    .folio-list span { color: #84948c; font-family: var(--mono); font-size: 0.65rem; }
+    .folio-bottom {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 25px;
+      color: var(--pine);
+      font-family: var(--mono);
+      font-size: 0.63rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+    .folio-bottom::before { width: 27px; height: 2px; background: var(--pine); content: ''; }
+
+    .section { padding-block: clamp(74px, 10vw, 126px); }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(200px, 0.72fr) minmax(300px, 1.28fr);
+      align-items: end;
+      gap: 45px;
+      margin-bottom: 48px;
+    }
+    .section-head .eyebrow { color: #54746a; }
+    h2 {
+      margin: 15px 0 0;
+      color: var(--pine);
+      font-family: var(--display);
+      font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+    }
+    .section-summary { max-width: 520px; margin: 0; color: var(--muted); font-size: 1rem; line-height: 1.8; }
+    .services { background: var(--white); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .service-card { min-height: 245px; padding: 27px 28px 32px 0; }
+    .service-card + .service-card { padding-left: 28px; border-left: 1px solid var(--line); }
+    .service-card .eyebrow { color: #74847c; }
+    .service-card h3 {
+      margin: 36px 0 12px;
+      color: var(--pine);
+      font-family: var(--display);
+      font-size: 2.05rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+    .service-card p { max-width: 310px; margin: 0; color: var(--muted); font-size: 0.92rem; line-height: 1.7; }
+
+    .profile { background: var(--sage); }
+    .profile-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(42px, 9vw, 120px); align-items: start; }
+    .profile-aside { padding-top: 9px; }
+    .profile-aside .eyebrow { color: #4d7063; }
+    .profile-name {
+      margin: 18px 0 15px;
+      color: var(--pine);
+      font-family: var(--display);
+      font-size: clamp(2.6rem, 5vw, 4.2rem);
+      font-weight: 500;
+      letter-spacing: -0.04em;
+      line-height: 0.96;
+    }
+    .profile-role { margin: 0; color: #52665d; font-size: 0.93rem; line-height: 1.7; }
+    .profile-copy { padding-top: 5px; }
+    .profile-copy p { margin: 0 0 18px; color: #42574e; font-size: 1.05rem; line-height: 1.85; }
+    .profile-rule { width: 64px; height: 3px; margin-top: 30px; background: var(--pine); }
+
+    .contact { position: relative; overflow: hidden; background: var(--pine-dark); color: var(--white); }
+    .contact::after {
+      position: absolute;
+      right: -110px;
+      bottom: -270px;
+      width: 590px;
+      height: 590px;
+      border: 1px solid rgba(217, 230, 122, 0.2);
+      border-radius: 50%;
+      content: '';
+      pointer-events: none;
+    }
+    .contact-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr auto; align-items: end; gap: 55px; }
+    .contact .eyebrow { color: var(--signal); }
+    .contact h2 { max-width: 660px; color: var(--white); }
+    .contact-copy { max-width: 590px; margin: 22px 0 0; color: rgba(251, 252, 248, 0.72); font-size: 1rem; line-height: 1.75; }
+    .contact-actions { display: grid; gap: 12px; min-width: 220px; }
+    .contact-phone { color: rgba(251, 252, 248, 0.8); font-size: 0.88rem; text-align: center; text-decoration: underline; text-underline-offset: 4px; }
+
+    .site-footer { padding-block: 25px; background: var(--pine-dark); color: rgba(251, 252, 248, 0.58); border-top: 1px solid rgba(251, 252, 248, 0.16); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .footer-brand { color: var(--white); font-family: var(--display); font-size: 1.25rem; }
+    .footer-note { max-width: 700px; margin: 0; font-size: 0.72rem; line-height: 1.65; text-align: right; }
+
+    @media (max-width: 850px) {
+      .hero-grid { grid-template-columns: 1fr 0.8fr; gap: 34px; }
+      .folio { padding: 24px 22px 24px 30px; }
+      .section-head { grid-template-columns: 1fr; gap: 21px; }
+      .contact-grid { grid-template-columns: 1fr; align-items: start; }
+      .contact-actions { display: flex; flex-wrap: wrap; align-items: center; }
+      .contact-phone { padding: 12px; }
+    }
+    @media (max-width: 640px) {
+      .wrap { width: min(var(--content), calc(100% - 36px)); }
+      .header-inner { min-height: 74px; flex-wrap: wrap; gap: 12px; padding-block: 13px; }
+      .brand-name { font-size: 1.38rem; }
+      .nav { order: 3; width: 100%; justify-content: space-between; gap: 16px; padding: 3px 0 1px; }
+      .nav a { font-size: 0.78rem; }
+      .header-cta { margin-left: auto; padding: 10px 12px; font-size: 0.75rem; }
+      .header-cta svg { width: 15px; height: 15px; }
+      .hero-grid { min-height: auto; grid-template-columns: 1fr; gap: 52px; padding-block: 77px 68px; }
+      h1 { margin-top: 21px; font-size: clamp(3.55rem, 16vw, 5.1rem); }
+      .hero-intro { font-size: 0.98rem; }
+      .hero-actions { align-items: stretch; }
+      .hero-actions .button { width: 100%; }
+      .folio { justify-self: stretch; width: 100%; min-height: auto; }
+      .section { padding-block: 72px; }
+      .section-head { margin-bottom: 33px; }
+      .service-grid { grid-template-columns: 1fr; }
+      .service-card { min-height: auto; padding: 25px 0 28px; }
+      .service-card + .service-card { padding-left: 0; border-left: 0; border-top: 1px solid var(--line); }
+      .service-card h3 { margin-top: 22px; }
+      .profile-grid { grid-template-columns: 1fr; gap: 29px; }
+      .profile-name { max-width: 470px; }
+      .contact-grid { gap: 32px; }
+      .contact-actions { display: grid; }
+      .contact-phone { text-align: left; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 10px; }
+      .footer-note { text-align: left; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#inicio" aria-label="Licenciada Adriana Stevanovich, inicio">
+        <span>
+          <span class="brand-name">Lic. Adriana Stevanovich</span>
+          <span class="brand-role">Abogada · Notaria pública</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#servicios">Servicios</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <a class="header-cta" href="https://wa.me/50687074467" target="_blank" rel="noopener noreferrer" aria-label="Escribir por WhatsApp">
+        WhatsApp
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19.2 6.2 16A8 8 0 1 1 9 18.5L5 19.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.1 8.5c.3-.6.6-.6.9-.6.2 0 .4 0 .6.5l.7 1.5c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .7.4.7 1 1.3 1.8 1.7.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2.8-.6 1.1-.4.4-1 .6-1.6.6-.5 0-1.2-.2-2-.6-1-.5-2.1-1.4-3-2.4-.8-1-1.3-2-1.3-2.8 0-.6.3-1.1.6-1.5Z" fill="currentColor"/></svg>
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Costa Rica · Servicios legales y notariales</p>
+          <h1 id="hero-title">Decisiones importantes, <em>con respaldo legal.</em></h1>
+          <p class="hero-intro">Servicios notariales y asistencia legal en asuntos de matrimonio, divorcio y bienes raíces.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://wa.me/50687074467?text=Hola%2C%20quisiera%20consultar%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer">
+              Escribir por WhatsApp
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19.2 6.2 16A8 8 0 1 1 9 18.5L5 19.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.1 8.5c.3-.6.6-.6.9-.6.2 0 .4 0 .6.5l.7 1.5c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .7.4.7 1 1.3 1.8 1.7.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2.8-.6 1.1-.4.4-1 .6-1.6.6-.5 0-1.2-.2-2-.6-1-.5-2.1-1.4-3-2.4-.8-1-1.3-2-1.3-2.8 0-.6.3-1.1.6-1.5Z" fill="currentColor"/></svg>
+            </a>
+            <a class="button button-quiet" href="tel:+50687074467">Llamar al +506 8707 4467</a>
+          </div>
+        </div>
+
+        <aside class="folio" aria-label="Áreas de atención">
+          <div class="folio-top">
+            <p class="eyebrow">Áreas de atención</p>
+            <span class="folio-country">CR / Legal</span>
+          </div>
+          <h2 class="folio-title">Acompañamiento<br />legal y notarial</h2>
+          <p class="folio-text">Atención profesional para consultas relacionadas con:</p>
+          <ul class="folio-list">
+            <li><span>A</span>Notaría pública</li>
+            <li><span>B</span>Matrimonios y divorcios</li>
+            <li><span>C</span>Bienes raíces</li>
+          </ul>
+          <div class="folio-bottom">Lic. Adriana Stevanovich</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section services" id="servicios" aria-labelledby="services-title">
+      <div class="wrap">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Servicios</p>
+            <h2 id="services-title">Asistencia para asuntos que requieren cuidado.</h2>
+          </div>
+          <p class="section-summary">Conozca las áreas de servicio y comuníquese para consultar sobre su situación. La atención y el alcance de cada servicio se confirman directamente.</p>
+        </div>
+
+        <div class="service-grid">
+          <article class="service-card">
+            <p class="eyebrow">Servicios notariales</p>
+            <h3>Notaría pública</h3>
+            <p>Servicios notariales para las gestiones que requieren intervención de una notaria pública.</p>
+          </article>
+          <article class="service-card">
+            <p class="eyebrow">Derecho de familia</p>
+            <h3>Matrimonios y divorcios</h3>
+            <p>Asistencia legal en asuntos relacionados con matrimonio y divorcio.</p>
+          </article>
+          <article class="service-card">
+            <p class="eyebrow">Bienes raíces</p>
+            <h3>Asistencia legal</h3>
+            <p>Orientación legal para consultas relacionadas con bienes raíces.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section profile" id="perfil" aria-labelledby="profile-title">
+      <div class="wrap profile-grid">
+        <div class="profile-aside">
+          <p class="eyebrow">Perfil profesional</p>
+          <h2 class="profile-name" id="profile-title">Adriana Stevanovich Rojas</h2>
+          <p class="profile-role">Abogada y notaria pública · Costa Rica</p>
+          <div class="profile-rule" aria-hidden="true"></div>
+        </div>
+        <div class="profile-copy">
+          <p>La Lic. Adriana Stevanovich brinda servicios notariales y asistencia legal en las áreas indicadas en este sitio.</p>
+          <p>Para conocer si puede atender su consulta y recibir información sobre el servicio correspondiente, comuníquese directamente por WhatsApp o teléfono.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contacto" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div>
+          <p class="eyebrow">Contacto</p>
+          <h2 id="contact-title">Conversemos sobre su consulta.</h2>
+          <p class="contact-copy">Puede escribir por WhatsApp o llamar al número de contacto. El correo electrónico no se muestra porque está pendiente de confirmación.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="https://wa.me/50687074467?text=Hola%2C%20quisiera%20consultar%20sobre%20sus%20servicios." target="_blank" rel="noopener noreferrer">
+            Escribir por WhatsApp
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19.2 6.2 16A8 8 0 1 1 9 18.5L5 19.2Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9.1 8.5c.3-.6.6-.6.9-.6.2 0 .4 0 .6.5l.7 1.5c.1.2.1.4-.1.6l-.5.6c-.2.2-.2.4 0 .7.4.7 1 1.3 1.8 1.7.2.1.4.1.6-.1l.7-.7c.2-.2.4-.2.6-.1l1.5.7c.3.1.4.3.4.5 0 .3-.2.8-.6 1.1-.4.4-1 .6-1.6.6-.5 0-1.2-.2-2-.6-1-.5-2.1-1.4-3-2.4-.8-1-1.3-2-1.3-2.8 0-.6.3-1.1.6-1.5Z" fill="currentColor"/></svg>
+          </a>
+          <a class="contact-phone" href="tel:+50687074467">Llamar: +506 8707 4467</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="footer-brand">Lic. Adriana Stevanovich</span>
+      <p class="footer-note">La información de esta página es general y no constituye asesoría legal para un caso específico. La atención y el alcance de cada servicio deben confirmarse directamente.</p>
+    </div>
+  </footer>
+</body>
+</html>
